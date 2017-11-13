@@ -1,0 +1,65 @@
+﻿@model IEnumerable<sahalBuyerSeller.Country>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<a class="btn btn-primary" href="@Url.Action("Create","Categories")">Add New Category</a>
+<br />
+<div class="portlet box green">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-cogs"></i>Category List
+        </div>
+        <div class="tools">
+            <a href="javascript:;" class="collapse" data-original-title="" title=""> </a>
+            <a href="#portlet-config" data-toggle="modal" class="config" data-original-title="" title=""> </a>
+            <a href="javascript:;" class="reload" data-original-title="" title=""> </a>
+            <a href="javascript:;" class="remove" data-original-title="" title=""> </a>
+        </div>
+    </div>
+    <div class="portlet-body flip-scroll" style="display: block;">
+
+        <table class="table table-bordered table-striped table-condensed flip-content">
+            <thead class="flip-content">
+                <tr>
+                    <td>@Html.DisplayName("Id")</td>
+                    <td>@Html.DisplayName("Name")</td>
+                    <td>@Html.DisplayName("Created Date")</td>
+                    <td>@Html.DisplayName("Action")</td>
+
+
+
+
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+            {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id
+                           )
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name
+                           )
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreatedDate)
+                        </td>
+
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                        </td>
+
+                    </tr>
+                }
+
+        </table>
+    </div>
+</div>

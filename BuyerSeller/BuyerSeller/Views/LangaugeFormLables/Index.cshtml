@@ -1,0 +1,86 @@
+﻿@model IEnumerable<BuyerSeller.Models.LanguageForm>
+@{
+    ViewBag.Title = "LanguageList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-xxl-12 col-lg-12">
+    <!-- Panel Projects -->
+    <div class="panel" id="projects">
+        <div class=" panel-heading">
+            <h3 class="panel-title">LanguageList</h3>
+
+            <div class="container">
+                <div class="example table-responsive">
+                    <table class="table table-hover">
+
+                        <thead>
+                            <tr>
+                                <th>Key</th>
+                                <th>English Value</th>
+                                <th>Arabic Value</th>
+                                <th>Language</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+
+                                <tr>
+                                    <td>@item.Key</td>
+                                    <td>@item.Value</td>
+                                    <td>@item.ArabicValue</td>
+                                    <td>@(item.LanguageId == 1 ? "English" : "Arabic")</td>
+                                    <td>
+                                        <button class="btn btn-primary editLang" data-target="#exampleFormModalAdd" data-toggle="modal"
+                                                type="button" data-id="@item.ID" data-key="@item.Key" data-value="@item.Value" data-lang="@item.LanguageId">
+                                            Edit
+                                        </button>
+
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleFormModalAdd" aria-hidden="false" aria-labelledby="exampleFormModalLabel"
+         role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-simple">
+            @Html.Partial("_Editlanguage")
+        </div>
+    </div>
+    <!-- End Modal -->
+    <!-- End Panel Projects -->
+</div>
+
+@section scripts{
+    <script>
+
+        $(function () {
+            $('.editLang').click(function (e) {
+                var $this = $(this);
+                var id = $(this).data('id');
+                var key = $(this).data('key');
+                var value = $(this).data('value');
+                var langType = $(this).data('lang');
+
+
+                $('#Key').val(key);
+                $('#Value').val(value);
+                $('#ID').val(id);
+                $("#langType").val(langType);
+            });
+        });
+
+
+    </script>
+
+}
+

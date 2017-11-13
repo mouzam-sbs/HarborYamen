@@ -1,0 +1,58 @@
+﻿@model BuyerSeller.Models.OrderDetail
+
+<div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <input type="hidden" id="SellerId" value="@Model.User.ID" />
+            <h4 class="modal-title">@Model.User.Name</h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-4">
+
+                    <img src="~/ProductImages/@Model.Image" class="img-thumbnail img-responsive" height="400" />
+
+                </div>
+
+                <div class="col-md-8">
+
+                    <div class="portfolio-info">
+                        <div class="row">
+                            <div class="col-md-12 center">
+                                <ul style="list-style:none;">
+                                    <li>
+                                        <i class="fa fa-calendar"></i> @Model.Order.Createdon
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-tags"></i> <a href="#">@Model.Order.Brand.Name</a>, <a href="#">@Model.Order.Category.Name</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p><strong> Seller Details</strong></p>
+                    <p style="margin:0;padding:0;">Mobile: @Model.User.MobileNo</p>
+                    <p style="margin:0;padding:0;">Email: @Model.User.EmailID</p>
+                    <p style="margin:0;padding:0;">Address: @Model.User.Address</p>
+                    <br />
+                    <p><strong> Product Details</strong></p>
+                    <p style="margin:0;padding:0;">Part Name:@Model.Order.PartName</p>
+                    <p style="margin:0;padding:0;">Quantity: @Model.Order.Qty</p>
+                    <p style="margin:0;padding:0;">Price:@Model.Price</p>
+                    <p style="margin:0;padding:0;">Total:@Model.TotalPrice</p>
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer trSeller" data-sellerid="@Model.ID">
+            <button type="button" class="btn btn-primary btnSelectSeller" data-dismiss="modal" onclick="location.href='@Url.Action("CompleteOrder","Home",new { id=Model.ID})'">Select & Close Requirement</button>
+
+            <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html>
+ 
+<html>
+<head>
+ 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Harbor</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    
+   
+    <link href="~/Content/Theme/rtl/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" />
+    @if(BuyerSeller.Helpers.CultureHelper.GetCurrentCulture() == "ar")
+    {
+        <link href="~/Content/Theme/rtl/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/Content/Theme/rtl/skins/_all-skins.min.css" rel="stylesheet" />
+        <link href="~/Content/Theme/rtl/bootstrap-rtl.min.css" rel="stylesheet" />
+        <link href="~/Content/Theme/rtl/bootstrap/fonts/fonts-fa.css" rel="stylesheet" />
+        <link href="~/Content/Theme/rtl/skins/skin-blue.min.css" rel="stylesheet" />
+        <link href="~/Content/Theme/rtl/AdminLTE.min.css" rel="stylesheet" />
+
+    }
+    else 
+    {
+        <link href="~/Content/Theme/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/Content/Theme/dist/css/skins/_all-skins.min.css" rel="stylesheet" />
+        <link href="~/Content/Theme/dist/css/AdminLTE.min.css" rel="stylesheet" />
+        <link href="~/Content/Theme/dist/css/skins/skin-blue.min.css" rel="stylesheet" />
+
+    }
+    <script src="~/Content/Theme/dist/js/dashboard.js"></script>
+    <script src="~/Content/Theme/dist/js/jquery-ui.min.js"></script>
+    <script src="~/Content/Theme/plugins/iCheck/icheck.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="~/Content/Theme/dist/css/alt/select2.min.css" rel="stylesheet" />
+    <link href="~/Content/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="~/Content/Custom.css" rel="stylesheet" />
+    <script src="~/Content/Theme/plugins/iCheck/icheck.js"></script>
+    @*<link href="~/Content/Theme/plugins/datepicker/datepicker3.css" rel="stylesheet" />
+        <link href="~/Content/juquery-ui.css" rel="stylesheet" />
+
+        <!-- AdminLTE App -->
+        <script src="~/Content/Theme/dist/js/app.min.js"></script>
+        <!-- Optionally, you can add Slimscroll and FastClick plugins.
+             Both of these plugins are recommended to enhance the
+             user experience. Slimscroll is required when using the
+             fixed layout. -->
+
+        <script src="~/Content/Theme/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <script src="~/Content/Theme/plugins/iCheck/icheck.min.js"></script>*@
+    <script>
+        var folderBaseURL = "http://localhost:59034/";
+        function ExecuteAjaxCall(url, data, successFunc, errFunc, isAsync) {
+            $.ajax({
+                url: url,
+                data: data,
+                async: isAsync,
+                success: successFunc,
+                error: errFunc
+            });
+        }
+        function iCheckSelect() {
+            //iCheck for checkbox and radio inputs
+            $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+                checkboxClass: 'icheckbox_minimal-blue',
+                radioClass: 'iradio_minimal-blue'
+            });
+            //Red color scheme for iCheck
+            $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+                checkboxClass: 'icheckbox_minimal-red',
+                radioClass: 'iradio_minimal-red'
+            });
+            //Flat red color scheme for iCheck
+            $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+                checkboxClass: 'icheckbox_flat-green',
+                radioClass: 'iradio_flat-green'
+            });
+        }
+    </script>
+    <style>
+        .ProductId {
+            display: none;
+        }
+    </style>
+    <script>
+        //session end
+        var sessionTimeoutWarning = @Session.Timeout -1;
+
+        var sTimeout = parseInt(sessionTimeoutWarning) * 60 * 1000;
+        setTimeout('SessionEnd()', sTimeout);
+
+        function SessionEnd() {
+            window.location = "/Account/LogOff";
+        }
+    </script>
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="hold-transition skin-blue sidebar-mini wysihtml5-supported">
+    <div class="wrapper">
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href='@Url.Action("Index", "Account")' class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini">
+                    <img src="~/Images/logo.png" />
+                </span>
+                <!-- logo for regular state and mobile devices -->
+                <img src="~/Images/logo.png" width="150" height="36" />
+            </a>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle navigation</span>
+                        </a>
+                    </div>
+                    <div class="col-md-2">
+
+                    </div>
+                    <div class="col-md-2">
+                        <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right" style="padding-top:10px;">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" style="padding:5px 15px;">
+                                    <strong>@(BuyerSeller.Helpers.CultureHelper.GetCurrentCulture() == "ar" ? "Arabic" : "English")</strong> <i class="fa fa-angle-down"></i>
+                                </a>
+                                <div class="dropdown-menu" role="menu">
+                                    <a style="padding:10px;" class="dropdown-item" href="@Url.Action(Request.RequestContext.RouteData.Values["action"].ToString(),Request.RequestContext.RouteData.Values["controller"].ToString(),new {culture = "en" })">
+                                        English
+                                    </a>
+                                    <div class="dropdown-divider">
+                                        <hr />
+                                    </div>
+                                    <a style="padding:10px;" class="dropdown-item" href="@Url.Action(Request.RequestContext.RouteData.Values["action"].ToString(),Request.RequestContext.RouteData.Values["controller"].ToString(),new {culture = "ar" })">
+                                        Arabic
+                                    </a>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="navbar-custom-menu">
+                            @using BuyerSeller.Models;
+                            @{
+                                BuyerSellerModel db = new BuyerSellerModel();
+                                long userId = Convert.ToInt64(Session["UserId"]);
+                                var resimage = db.Users.Where(x => x.ID == userId).FirstOrDefault();
+                                var Notifications = db.Notifications.Where(x => x.UserId == userId).ToList();
+                            }
+                            <ul class="nav navbar-nav">
+                                <!-- Messages: style can be found in dropdown.less-->
+
+
+
+                                <li class="dropdown messages-menu">
+                                    <!-- Menu toggle button -->
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-envelope-o"></i>
+                                        <span class="label label-success">@Notifications.Count()</span>
+                                    </a>
+
+
+                                    <ul class="dropdown-menu">
+                                        <li class="header">You have @Notifications.Count() messages</li>
+                                        <li>
+                                            <!-- inner menu: contains the messages -->
+                                            <ul class="menu">
+                                                <li>
+                                                    <!-- start message -->
+
+                                                    @foreach (var item in Notifications)
+                                                    {
+                                                    <a href="#">
+
+                                                        <h4>
+                                                            Notification
+                                                            <small><i class="fa fa-clock-o"></i> @item.CreatedDate</small>
+                                                        </h4>
+                                                        <!-- The message -->
+                                                        <div style="max-width:150px;">
+                                                            <h5>@item.Message</h5>
+                                                        </div>
+                                                    </a>
+                                                    }
+
+                                                </li>
+                                                <!-- end message -->
+                                            </ul>
+                                            <!-- /.menu -->
+                                        </li>
+                                        <li class="footer"><a href="#">See All Messages</a></li>
+                                    </ul>
+                                </li>
+
+                                <!-- User Account Menu -->
+                                <li class="dropdown user user-menu">
+                                    <!-- Menu Toggle Button -->
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <!-- The user image in the navbar-->
+                                        @{
+                                            string base64Product = string.Empty;
+                                            string ProductImage = string.Empty;
+
+                                            if (resimage.ImageUpload != null)
+                                            {
+                                                base64Product = Convert.ToBase64String(resimage.ImageUpload);
+                                                ProductImage = string.Format("data:image/jpg;base64,{0}", base64Product);
+                                            }
+
+                                        }
+                                        <img src='@ProductImage' height="160" width="160" class="user-image" alt="User Image" />
+
+                                        <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                        <span class="hidden-xs">@Session["UserName"]</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <!-- The user image in the menu -->
+                                        <li class="user-header">
+                                            <img src='@ProductImage' height="160" width="160" class="user-image" alt="User Image" />
+
+                                            <p>
+                                                @resimage.Name
+                                            </p>
+
+                                            <p>
+                                                @resimage.MobileNo
+
+                                            </p>
+                                        </li>
+                                        <!-- Menu Body -->
+                                        <!-- Menu Footer-->
+                                        <li class="user-footer">
+                                            <div class="pull-left">
+                                                <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                            </div>
+                                            <div class="pull-right">
+                                                <a href="@Url.Action("Logout","Account")" class="btn btn-default btn-flat">Logout</a>
+
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Sidebar toggle button-->
+                <!-- Navbar Right Menu -->
+
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src='@ProductImage' height="250" width="250" class="img-circle" alt="User Image" />
+
+                    </div>
+                    <div class="pull-left info">
+                        <p> @Session["UserName"]</p>
+                        <!-- Status -->
+                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    </div>
+                </div>
+                <!-- search form (Optional) -->
+                @*<form action="#" method="get" class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search...">
+                            <span class="input-group-btn">
+                                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>*@
+                <!-- /.search form -->
+                <!-- Sidebar Menu -->
+                <ul class="sidebar-menu">
+                    @Html.Action("Menu", "Menu")
+                </ul>
+                <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <!-- Main content -->
+            <section class="content">
+                @if (TempData["msg"] != null)
+                {
+                    <div class="alert alert-success" id="success-alert">
+                        <button type="button" class="close" data-dismiss="alert">x</button>
+                        <strong>@TempData["msg"] </strong>
+                    </div>
+                }
+                @RenderBody()
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!-- To the right -->
+            <div class="pull-right hidden-xs">
+                Anything you want
+            </div>
+            <!-- Default to the left -->
+            <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+        </footer>
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Create the tabs -->
+            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+                <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+                <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- Home tab content -->
+                <div class="tab-pane active" id="control-sidebar-home-tab">
+                    <h3 class="control-sidebar-heading">Recent Activity</h3>
+                    <ul class="control-sidebar-menu">
+                        <li>
+                            <a href="javascript:;">
+                                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                                    <p>Will be 23 on April 24th</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.control-sidebar-menu -->
+                    <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                    <ul class="control-sidebar-menu">
+                        <li>
+                            <a href="javascript:;">
+                                <h4 class="control-sidebar-subheading">
+                                    Custom Template Design
+                                    <span class="pull-right-container">
+                                        <span class="label label-danger pull-right">70%</span>
+                                    </span>
+                                </h4>
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.control-sidebar-menu -->
+                </div>
+                <!-- /.tab-pane -->
+                <!-- Stats tab content -->
+                <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+                <!-- /.tab-pane -->
+                <!-- Settings tab content -->
+                <div class="tab-pane" id="control-sidebar-settings-tab">
+                    <form method="post">
+                        <h3 class="control-sidebar-heading">General Settings</h3>
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Report panel usage
+                                <input type="checkbox" class="pull-right" checked>
+                            </label>
+                            <p>
+                                Some information about this general settings option
+                            </p>
+                        </div>
+                        <!-- /.form-group -->
+                    </form>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+        </aside>
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+             immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>
+
+<script src="~/Content/Theme/jquery-1.10.2.min.js"></script>
+<script src="~/Content/Theme/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="~/Content/Theme/dist/js/app.min.js"></script>
+<script src="~/Content/Theme/plugins/select2/select2.min.js"></script>
+
+<script>
+    $(function () {
+        //Initialize Select2 Elements
+        $(".select2").select2();
+    });
+    //$(function () {
+    //    //Date picker
+
+    //    $('#datepicker').datepicker({
+    //        autoclose: true
+    //    });
+    //    //Current Date Selection
+    //    $("#datepicker").datepicker("setDate", new Date());
+
+    //    $('#datepicker1').datepicker({
+    //        autoclose: true
+    //    });
+
+    //});
+
+    $("#success-alert").fadeTo(2000, 500).slideUp(500, function () {
+        $("#success-alert").slideUp(500);
+    });
+</script>
+

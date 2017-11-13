@@ -1,0 +1,194 @@
+﻿@model IEnumerable<BuyerSeller.Models.OrderDetail>
+    @{
+        ViewBag.Title = "Sellers";
+        Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+
+    }
+    @*<script type="text/javascript"
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6v5-2uaq_wusHDktM9ILcqIrlPtnZgEk">
+        </script>*@
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCF3v2mwlatKLyOCVU963SKUeM6fLPsvVM&callback=initMap"
+            type="text/javascript"></script>
+    <style>
+        .borderradius {
+            box-shadow: -2px 6px 5px 0px #ccc;
+        }
+
+        .customdiv {
+            color: #428bca;
+            background-color: #f9f9f9;
+            font-family: ProximaNovaRegular,'Source Sans Pro',Helvetica,Arial,sans-serif;
+            font-weight: 100;
+            text-align: center;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            margin: 10px;
+        }
+    </style>
+
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">Sellers</h3>
+        </div>
+        <div class="box-body">
+            <div class="container">
+                <div class="row">
+                    @foreach (var item in Model)
+            {
+                        <div class="col-md-4 orderdiv" data-orderdetailid="@item.ID" data-latitude="@item.User.Latitude" data-longitude="@item.User.Longitude">
+
+                            <div class="customdiv borderradius">
+
+                                <div class="divSellerDetails">
+                                    <h3 class="caption-subject font-green bold uppercase">@item.User.Name</h3>
+                                    <h4> Contact No:@item.User.MobileNo <br />Address: @item.User.Address </h4>
+                                </div>
+                                @{
+                                    string base64Product = string.Empty;
+                                    string ProductImage = string.Empty;
+                                    if (item.User.ImageUpload != null)
+                                    {
+                                        base64Product = Convert.ToBase64String(item.User.ImageUpload);
+                                        ProductImage = string.Format("data:image/jpg;base64,{0}", base64Product);
+                                    }
+                                }
+                                <img src='@ProductImage' height="250" width="250" />
+
+
+
+                                <br />
+                                <br />
+                                <a href="#" class="mt-info uppercase btn btn-success btn-flat viewDetails">Details</a>
+
+                                <a href="#" data-toggle="modal" id="btnViewMap" class="btn btn-success btn-flat ViewMap">View Map</a>
+
+
+
+
+                            </div>
+
+
+
+
+
+                        </div>
+                                    }
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div id="myModalRating" class="modal fade" role="dialog">
+            <div class="modal-dialog" id="ratingDialog">
+
+
+
+            </div>
+        </div>
+        <div id="sellerViewDetails" class="modal fade" role="dialog">
+
+        </div>
+        <div id="mapModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Seller on Map</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="map_canvas" style="width:500px;height:400px;"></div>
+                    </div>
+                    <div class="modal-footer trSeller">
+                        <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+        var latitude = 0;
+        var longitude = 0;
+        var divHtml="";
+        $(document).ready(function () {
+            $(".btnSelectSeller").click(function () {
+                $("#ratingDialog").empty();
+                $("#myModalRating").modal('show');
+                var btn = $(this);
+                var orderId = btn.closest(".trSeller").data("sellerid");
+
+                $.ajax({
+                    url: '@Url.Action("SellerReview", "Home")',
+                    data: { OrderId: orderId },
+                    success: function (responseData) {
+                        $("#ratingDialog").empty().append(responseData);
+                    },
+                    error: function (err) {
+
+                    }
+                });
+            });
+            $(".viewDetails").click(function () {
+                $("#sellerViewDetails").empty();
+                $("#sellerViewDetails").modal('show');
+                var btn = $(this);
+                var orderDetailId = btn.closest(".orderdiv").data("orderdetailid");
+                $.ajax({
+                    url: '@Url.Action("ViewOrderDetails", "Home")',
+                    data: { ID: orderDetailId },
+                    success: function (responseData) {
+                        $("#sellerViewDetails").empty().append(responseData);
+                    },
+                    error: function (err) {
+
+                    }
+                });
+            });
+           
+            $(".ViewMap").click(function () {
+                latitude = 0;
+                longitude = 0;
+                divHtml = "";
+                var btn = $(this);
+                var divOrder = btn.closest(".orderdiv");
+                latitude = divOrder.data("latitude");
+                longitude = divOrder.data("longitude");
+                divHtml = divOrder.find(".divSellerDetails").html();
+                $('#mapModal').modal('show');
+            });
+            $('#mapModal').on('shown.bs.modal', function () {
+                initmap();
+            });
+        });
+        function initmap() {
+            var lat = latitude;// 17.4000418
+            var lon = longitude;// 78.4134582
+            debugger;
+            var myLatlng = new google.maps.LatLng(lat, lon) // This is used to center the map to show our markers
+            var mapOptions = {
+                center: myLatlng,
+                zoom: 20,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                marker: true
+            };
+            var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: 'Detail view'
+            });
+            var contentString = '<h1>Map content</h1>';
+            var infowindow = new google.maps.InfoWindow({
+                content: divHtml
+            });
+            marker.addListener('click', function () {
+                infowindow.open(map, marker);
+            });
+            infoWindow.open(map);
+            marker.setMap(map);
+        }
+    </script>

@@ -1,0 +1,147 @@
+﻿
+@if (TempData["msg"]!=null)
+{
+    <h2> @TempData["msg"]</h2>
+}
+<div class="slider-with-overlay">
+
+    <div class="slider-container rev_slider_wrapper" style="height: 560px;">
+        <div id="revolutionSlider" class="slider rev_slider" data-plugin-revolution-slider data-plugin-options="{'delay': 9000, 'gridwidth': 1170, 'gridheight': 560}">
+            <ul>
+                <li data-transition="fade">
+                    <img src="~/Theme/img/slides/car1.jpg"  
+                     
+                    alt=""
+                    data-bgposition="center center"
+                    data-bgfit="cover"
+                    data-bgrepeat="no-repeat"
+                    class="rev-slidebg">
+
+                    <div class="tp-caption"
+                    data-x="177"
+                    data-y="180"
+                    data-start="1000"
+                    data-transform_in="x:[-300%];opacity:0;s:500;"><img src="img/slides/slide-title-border.png" alt=""></div>
+
+                    <div class="tp-caption top-label"
+                    data-x="227"
+                    data-y="180"
+                    data-start="500"
+                    data-transform_in="y:[-300%];opacity:0;s:500;">DO YOU NEED A NEW</div>
+
+                    <div class="tp-caption"
+                    data-x="480"
+                    data-y="180"
+                    data-start="1000"
+                    data-transform_in="x:[300%];opacity:0;s:500;"><img src="img/slides/slide-title-border.png" alt=""></div>
+
+                    <div class="tp-caption main-label"
+                    data-x="135"
+                    data-y="210"
+                    data-start="1500"
+                    data-whitespace="nowrap"
+                    data-transform_in="y:[100%];s:500;"
+                    data-transform_out="opacity:0;s:500;"
+                    data-mask_in="x:0px;y:0px;">WEB DESIGN?</div>
+
+                    <div class="tp-caption bottom-label"
+                    data-x="185"
+                    data-y="280"
+                    data-start="2000"
+                    data-transform_in="y:[100%];opacity:0;s:500;">Check out our options and features.</div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+ 
+
+    <div class="slider-contact-form">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-5 col-md-offset-7">
+                    <br />
+                    <div class="featured-boxes mt-none mb-none">
+                        <div class="featured-box featured-box-primary mt-xl">
+                            <div class="box-content">
+                                <h4 class="mb-none">Buyer Registration</h4>
+                                <p>Contact us or give us a call to discover how we can help.</p>
+                                <form action="@Url.Action("Register","Account")" method="post" class="form-signin">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <label>Your name *</label>
+                                                <input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="Name"  id="name" required>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label>Your email address *</label>
+                                                <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <label>Password *</label>
+                                                <input type="password" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="password" id="subject" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <label>Phone *</label>
+                                                <input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control"  name="Phone" id="subject" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <input type="submit" value="Save Buyer" class="btn btn-primary mb-xl" data-loading-text="Loading...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="alert alert-success hidden" id="contactSuccess">
+                                                Message has been sent to us.
+                                            </div>
+
+                                            <div class="alert alert-danger hidden" id="contactError">
+                                                Error sending your message.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="row mt-xl mb-xl pt-xl mb-xl">
+        <div class="col-md-4">
+            <h2 class="mt-xl mb-none text-color-dark">Who We Are</h2>
+            <p class="lead">Lorem Ipsum is simply dummy text</p>
+        </div>
+        <div class="col-md-2 center hidden-xs hidden-sm">
+            <img src="img/dotted-line-angle.png" class="img-responsive" />
+        </div>
+        <div class="col-md-6">
+            <p class="mt-xl">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            <a class="mt-md" href="company.html">Learn More <i class="fa fa-long-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <img src="~/Theme/brands.png" class="img-responsive" />
+    </div>
+</div>

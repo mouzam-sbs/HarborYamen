@@ -1,0 +1,113 @@
+﻿
+
+@model BuyerSeller.Models.Role_PermissionMapping
+@{
+    ViewBag.Title = "Role_PermissionMapping";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<link href="~/Content/Custom.css" rel="stylesheet" />
+
+@using (Html.BeginForm("SavePermissions", "RolePermissionMapping", FormMethod.Post, new { @id = "FormRolePermission" }))
+{
+    <div class="loader"> </div>
+
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">Role Permission Mapping</h3>
+        </div>
+        <div class="box-body">
+            <div class="container">
+                <div class="row"> 
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <label>Role Name</label>
+                            </div>
+                            <div class="col-md-5">
+                                <select class="form-control select2  RoleId" id="RoleId" style="width: 100%;" name="RoleId">
+                                    <option value="0">Select</option>
+
+                                    @if (ViewBag.RoleList != null)
+                                    {
+                                        foreach (var item in ViewBag.RoleList)
+                                        {
+                                            //string isSelected = string.Empty;
+                                            //if (item.Id == Model.RoleId)
+                                            //{
+                                            //    isSelected = "selected";
+                                            //}
+                                    <option value="@item.ID">@item.Name</option>
+                                        }
+                                    }
+                                </select>
+
+                            </div>
+                            <div class="col-md-2">
+                                <button type="submit" id="btnSubmit" class="btn btn-primary">
+                                    <i class="fa fa-spinner fa-spin hide"></i>
+                                    Save and Send
+                                </button>
+                            </div>
+                        </div>
+                        <br />
+                        <div id="loadPermission">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
+        <script>
+
+                $(document).ready(function () {
+                    loadPermissions();
+                    $("#RoleId").change(function () {
+
+                        loadPermissions(this.value);
+                    });
+                });
+                function loadPermissions(roldeId) {
+                    $("#loadPermission").empty();
+                    $.ajax({
+                        url: folderBaseURL + 'RolePermissionMapping/GetPermission?RoleId=' + roldeId,
+                        type: 'GET',
+                        success: function (data) {
+                            //alert(JSON.stringify(data));
+                            $("#loadPermission").append(data);
+                        }
+                    });
+                }
+
+                // $(document).ready(function ()
+                // {
+                //    //button loader
+                //    $('#btnSubmit').on('click', function () {
+                //        $(this).prop("disabled", true);
+                //        if ($('#btnSubmit i').hasClass("hide")) {
+                //            $('#btnSubmit i').removeClass("hide");
+                //        }
+                //        //$("#FormRolePermission").submit();
+                //        // var $btn = $(this).button('loading')
+                //        // business logic...
+                //        // $btn.button('reset')
+                //    });
+                //});
+
+
+                $("#success-alert").fadeTo(2000, 500).slideUp(500, function () {
+                    $("#success-alert").slideUp(500);
+                });
+                $(function () {
+                    //Initialize Select2 Elements
+                    $(".select2").select2();
+                });
+
+
+
+
+        </script>
+

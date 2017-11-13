@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Buyer & Seller App Login</title>
+
+    <link href="~/Content/Theme/LoginTheme/style.css" rel="stylesheet" />
+    <script src="~/Content/Theme/LoginTheme/index.js"></script>
+</head>
+
+<body class="login">
+    <div class="container">
+
+        <section id="content">
+            @using (Html.BeginForm("OTPAuthentication", "Account", FormMethod.Post))
+            {
+
+                <h2>OTP Authentication</h2>
+                <p class="alert-danger">Otp has sent to your Registered Mobile Number. Please Enter the Otp </p>
+                <div>
+                    <input type="text" placeholder="Enter OTP" required="" name="OtpPassword" id="username" />
+                </div>
+                <input type="hidden" value="@ViewBag.Mobile"name="Mobile" />
+                <div>
+                    <input type="submit" value="Submit" style="background-color:#730000" />
+                
+                </div>
+
+            }
+            <!-- form -->
+            <div class="button">
+                <a href="@Url.Action("Register","Account")">Resend Otp</a>
+            </div><!-- button -->
+        </section>
+    </div>
+
+</body>
+
+
+</html>

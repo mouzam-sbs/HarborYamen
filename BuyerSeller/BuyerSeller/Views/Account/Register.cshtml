@@ -1,0 +1,82 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <link href="~/Content/Theme/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Buyer Registration</title>
+
+    <link href="~/Content/Custom.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    @if (TempData["msg"] != null)
+    {
+        <div class="note note-info">
+
+            <strong>@TempData["msg"] </strong>
+        </div>
+    }
+    <div class="container">
+    @using (Html.BeginForm("BuyerRegistration", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+     <div class="row">
+         <h3 style="text-align:center;">Buyer Registration</h3>
+                <div class="form-body">
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Name</label>
+                        <div class="col-md-6">
+                            <input type="text" name="Name" class="form-control" placeholder="Enter text">
+                        </div>
+                    </div>
+                    <br /><br />
+                    <br />
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Phone</label>
+                        <div class="col-md-6">
+                            <input type="text" name="Phone" class="form-control" placeholder="Enter text">
+                        </div>
+                    </div>
+                    <br /><br />
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Email</label>
+                        <div class="col-md-6">
+                            <input type="text" name="email" class="form-control" placeholder="Enter text">
+                        </div>
+                    </div>
+                    <br /><br />
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Password</label>
+                        <div class="col-md-6">
+                            <input type="password" name="Password" class="form-control" placeholder="Enter text">
+                        </div>
+                    </div>
+                    <br /><br />
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Upload Image</label>
+                        <div class="col-md-6">
+                            <input type="file" name="Files" class="form-control" placeholder="Enter text">
+                        </div>
+                    </div>
+                    <br /><br />
+                </div>
+                <div class="form-actions">
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-4">
+                            <button type="submit" class="btn btn-primary btn-flat">Submit</button>
+                            <button type="submit" onclick="location.href='@Url.Action("Index","Account")'" class="btn btn-danger btn-flat">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- END FORM-->
+            </div>
+        
+    }
+    </div> <!-- /container -->
+</body>
+</html>

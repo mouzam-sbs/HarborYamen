@@ -1,0 +1,55 @@
+﻿@model IEnumerable<BuyerSeller.Models.Country>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="box box-primary">
+    <div class="box-header with-border">
+        <h3 class="box-title">View All Countries</h3>
+    </div>
+    <div class="box-body">
+        <table class="table table-bordered table-responsive table-hover">
+            <thead class="flip-content">
+                <tr>
+                    <td>@Html.DisplayName("Id")</td>
+                    <td>@Html.DisplayName("Name")</td>
+                    <td>@Html.DisplayName("Created Date")</td>
+                    <td>@Html.DisplayName("Action")</td>
+
+
+
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+            {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id
+                           )
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name
+                           )
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreatedDate)
+                        </td>
+
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                        </td>
+
+                    </tr>
+                }
+
+        </table>
+    </div>
+</div>
+ 
+ 

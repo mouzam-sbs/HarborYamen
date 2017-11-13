@@ -1,0 +1,61 @@
+﻿@model BuyerSeller.Models.User
+@{
+    ViewBag.Title = "ManageRole";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+@using (Html.BeginForm("ManageRole", "Account", FormMethod.Post))
+{
+    <div class="container">
+        <div class="row">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Assign Role</h3>
+                </div>
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label>Name</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="hidden" value="@Model.ID" name="ID" />
+                            <input readonly type="text" class="form-control" value="@Model.Name" name="Name" placeholder="Enter your Name" />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label>Role Name</label>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control select2  ddnCustomerId" aria-hidden="true" name="RoleId">
+                                <option value="0">Select Role</option>
+
+                                @if (ViewBag.RoleList != null && ViewBag.RoleList != null)
+                                {
+                                    foreach (var item in ViewBag.RoleList)
+                                    {
+                                        string iSselected = string.Empty;
+                                        if (item.ID==Model.RoleID)
+                                        {
+                                            iSselected ="selected";
+                                        }
+                                        <option value="@item.ID" @iSselected>@item.Name</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-2">
+
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

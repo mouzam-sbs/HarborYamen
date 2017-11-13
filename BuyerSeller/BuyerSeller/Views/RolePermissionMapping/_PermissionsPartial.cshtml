@@ -1,0 +1,29 @@
+﻿
+@model BuyerSeller.Common.RolePermissionMappingModel
+
+
+
+        <div class="row">
+            @foreach (var item in Model.PermissionList)
+            {
+                string statusChecked = "";
+                if (item.Status == true)
+                {
+                    statusChecked = "checked";
+                }
+
+                <div class="col-md-3" style="padding:10px;">
+                  
+                        
+                        <input type="checkbox" id="EmployeeAdd"  value="@item.Id"   name="CheckedValues" @statusChecked />
+                        <span for="inputBasicRemember">@item.Name</span>
+                    
+                </div>
+            }
+        </div>
+
+    
+<script>
+    iCheckSelect();
+</script>
+

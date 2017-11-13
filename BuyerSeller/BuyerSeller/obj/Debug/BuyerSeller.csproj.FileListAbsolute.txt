@@ -1,0 +1,150 @@
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\ApplicationInsights.config
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\roslyn\csc.exe
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\roslyn\System.Collections.Immutable.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\roslyn\System.Reflection.Metadata.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\roslyn\vbc.exe
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\roslyn\VBCSCompiler.exe
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\roslyn\VBCSCompiler.exe.config
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\BuyerSeller.dll.config
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\BuyerSeller.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\BuyerSeller.pdb
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\EntityFramework.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\EntityFramework.SqlServer.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\Microsoft.AI.DependencyCollector.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\Microsoft.AI.Web.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\Microsoft.AI.WindowsServer.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\Microsoft.ApplicationInsights.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\Microsoft.Web.Infrastructure.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\System.Web.Helpers.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\System.Web.Mvc.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\System.Web.Razor.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\System.Web.Webpages.Deployment.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\System.Web.Webpages.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\System.Web.Webpages.Razor.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\EntityFramework.xml
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\EntityFramework.SqlServer.xml
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\Microsoft.AI.DependencyCollector.xml
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\Microsoft.AI.Web.xml
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\Microsoft.AI.WindowsServer.xml
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\Microsoft.ApplicationInsights.xml
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\System.Web.Razor.xml
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\System.Web.Webpages.xml
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\System.Web.Webpages.Deployment.xml
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\System.Web.Webpages.Razor.xml
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\System.Web.Helpers.xml
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\bin\System.Web.Mvc.xml
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\obj\Debug\BuyerSeller.csprojResolveAssemblyReference.cache
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\obj\Debug\BuyerSeller.dll
+E:\Harbor Yaman\BuyerSeller\BuyerSeller\obj\Debug\BuyerSeller.pdb
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\ApplicationInsights.config
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\csc.exe
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\System.Collections.Immutable.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\System.Reflection.Metadata.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\vbc.exe
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\VBCSCompiler.exe
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\VBCSCompiler.exe.config
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\BuyerSeller.dll.config
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\BuyerSeller.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\BuyerSeller.pdb
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\EntityFramework.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\EntityFramework.SqlServer.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.Agent.Intercept.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.DependencyCollector.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.Web.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.WindowsServer.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.ApplicationInsights.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.Web.Infrastructure.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Helpers.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Mvc.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Razor.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Webpages.Deployment.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Webpages.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Webpages.Razor.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\EntityFramework.xml
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\EntityFramework.SqlServer.xml
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.DependencyCollector.xml
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.Web.xml
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.WindowsServer.xml
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.ApplicationInsights.xml
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Razor.xml
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Webpages.xml
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Webpages.Deployment.xml
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Webpages.Razor.xml
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Helpers.xml
+F:\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Mvc.xml
+F:\BuyerSeller\BuyerSeller\BuyerSeller\obj\Debug\BuyerSeller.csprojResolveAssemblyReference.cache
+F:\BuyerSeller\BuyerSeller\BuyerSeller\obj\Debug\BuyerSeller.dll
+F:\BuyerSeller\BuyerSeller\BuyerSeller\obj\Debug\BuyerSeller.pdb
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\ApplicationInsights.config
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\csc.exe
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\System.Collections.Immutable.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\System.Reflection.Metadata.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\vbc.exe
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\VBCSCompiler.exe
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\roslyn\VBCSCompiler.exe.config
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\BuyerSeller.dll.config
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\BuyerSeller.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\BuyerSeller.pdb
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\EntityFramework.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\EntityFramework.SqlServer.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.DependencyCollector.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.Web.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.WindowsServer.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.ApplicationInsights.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.Web.Infrastructure.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Helpers.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Mvc.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Razor.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Webpages.Deployment.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Webpages.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Webpages.Razor.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\EntityFramework.xml
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\EntityFramework.SqlServer.xml
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.DependencyCollector.xml
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.Web.xml
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.AI.WindowsServer.xml
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.ApplicationInsights.xml
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Mvc.xml
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Razor.xml
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Webpages.xml
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Webpages.Deployment.xml
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Webpages.Razor.xml
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\bin\System.Web.Helpers.xml
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\obj\Debug\BuyerSeller.dll
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\obj\Debug\BuyerSeller.pdb
+E:\Harbor Yaman\Latest\BuyerSeller\BuyerSeller\BuyerSeller\obj\Debug\BuyerSeller.csprojResolveAssemblyReference.cache

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<sahalBuyerSeller.OrderDetail>
+@{
+    ViewBag.Title = "PostedOrders";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="portlet box green">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-cogs"></i>Posted Orders
+        </div>
+        <div class="tools">
+            <a href="javascript:;" class="collapse" data-original-title="" title=""> </a>
+            <a href="#portlet-config" data-toggle="modal" class="config" data-original-title="" title=""> </a>
+            <a href="javascript:;" class="reload" data-original-title="" title=""> </a>
+            <a href="javascript:;" class="remove" data-original-title="" title=""> </a>
+        </div>
+    </div>
+    <div class="portlet-body flip-scroll" style="display: block;">
+
+        <table class="table table-bordered table-striped table-condensed flip-content">
+            <thead class="flip-content">
+                <tr>
+                    <td>@Html.DisplayName("Brand")</td>
+                    <td>@Html.DisplayName("Model")</td>
+                    <td>@Html.DisplayName("Category")</td>
+                    <td>@Html.DisplayName("Category")</td>
+                    <td>@Html.DisplayName("Price")</td>
+                    <td>@Html.DisplayName("Qty")</td>
+                    <td>@Html.DisplayName("TotalPrice")</td>
+
+
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Order.Brand.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Order.Model.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Order.Category.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Order.PartName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Order.Qty)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalPrice)
+                    </td>
+                </tr>
+                }
+
+
+
+        </table>
+    </div>
+</div>
+
+
