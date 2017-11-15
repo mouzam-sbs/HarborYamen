@@ -8,7 +8,7 @@
 
 <div class="box box-primary">
     <div class="box-header with-border">
-        <h3 class="box-title">Add Seller</h3>
+        <h3 class="box-title">@GetValueByKey("AddSeller")</h3>
     </div>
 
     <div class="box-body">
@@ -31,10 +31,10 @@
                 <br />
                 <br />*@
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Brand Name</label>
+                    <label class="col-md-3 control-label">@GetValueByKey("BrandName")</label>
                     <div class="col-md-6">
                         <select class="select2 form-control" name="BrandId">
-                            <option value="0">Select Brand</option>
+                            <option value="0">@GetValueByKey("SelectBrand")</option>
                             @if (ViewBag.BrandList != null)
                             {
                                 foreach (var item in ViewBag.BrandList)
@@ -55,39 +55,39 @@
                 <br />
                 <br /><br />
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Name</label>
+                    <label class="col-md-3 control-label">@GetValueByKey("Name")</label>
                     <div class="col-md-6">
-                        <input type="text" name="Name" class="form-control" placeholder="Enter text">
+                        <input type="text" name="Name" class="form-control" placeholder="@GetValueByKey("EnterText")">
                     </div>
                 </div>
                 <br />
                 <br />
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Phone</label>
+                    <label class="col-md-3 control-label">@GetValueByKey("Phone")</label>
                     <div class="col-md-6">
-                        <input type="text" name="Phone" class="form-control" placeholder="Enter text">
+                        <input type="text" name="Phone" class="form-control" placeholder="@GetValueByKey("EnterText")">
                     </div>
                 </div>
                 <br />
                 <br />
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Email Address</label>
+                    <label class="col-md-3 control-label">@GetValueByKey("Email")</label>
                     <div class="col-md-6">
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <i class="fa fa-envelope"></i>
                             </span>
-                            <input type="email" name="email" class="form-control" placeholder="Email Address">
+                            <input type="email" name="email" class="form-control" placeholder="@GetValueByKey("Email")">
                         </div>
                     </div>
                 </div>
                 <br />
                 <br />
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Password</label>
+                    <label class="col-md-3 control-label">@GetValueByKey("Password")</label>
                     <div class="col-md-6">
                         <div class="input-group">
-                            <input type="password" name="Password" class="form-control" placeholder="Password">
+                            <input type="password" name="Password" class="form-control" placeholder="@GetValueByKey("Password")">
                             <span class="input-group-addon">
                                 <i class="fa fa-user"></i>
                             </span>
@@ -98,21 +98,21 @@
                 <br />
 
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Latitude</label>
+                    <label class="col-md-3 control-label">@GetValueByKey("Latitude")</label>
                     <div class="col-md-6">
 
-                        <input type="text" name="Latitude" class="form-control" placeholder="Longitude">
+                        <input type="text" name="Latitude" class="form-control" placeholder="@GetValueByKey("Latitude")">
 
                     </div>
                 </div>
                 <br />
                 <br />
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Longitude</label>
+                    <label class="col-md-3 control-label">@GetValueByKey("Longitude")</label>
                     <div class="col-md-6">
 
 
-                        <input type="text" name="Longitude" class="form-control" placeholder="Longitude">
+                        <input type="text" name="Longitude" class="form-control" placeholder="@GetValueByKey("Longitude")">
 
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                 <br />
                 <br />
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Image Upload</label>
+                    <label class="col-md-3 control-label">@GetValueByKey("UploadImage")</label>
                     <div class="col-md-6">
 
 
@@ -131,11 +131,11 @@
                 <br />
                 <br />
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Address</label>
+                    <label class="col-md-3 control-label">@GetValueByKey("Address")</label>
                     <div class="col-md-6">
 
 
-                        <textarea class="form-control" name="Address" placeholder="Address"></textarea>
+                        <textarea class="form-control" name="Address" placeholder="@GetValueByKey("Address")"></textarea>
 
                     </div>
                 </div>
@@ -146,8 +146,8 @@
                 <div class="form-actions">
                     <div class="row">
                         <div class="col-md-offset-3 col-md-4">
-                            <button type="submit" class="btn btn-primary btn-flat">Submit</button>
-                            <button type="button" class="btn btn-danger btn-flat">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-flat">@GetValueByKey("Submit")</button>
+                            <button type="button" class="btn btn-danger btn-flat">@GetValueByKey("Cancel")</button>
                         </div>
                     </div>
                 </div>

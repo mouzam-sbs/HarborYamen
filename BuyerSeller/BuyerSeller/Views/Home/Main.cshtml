@@ -65,17 +65,17 @@
                     <div class="featured-boxes mt-none mb-none">
                         <div class="featured-box featured-box-primary mt-xl">
                             <div class="box-content">
-                                <h4 class="mb-none">Buyer Registration</h4>
+                                <h4 class="mb-none">@GetValueByKey("BuyerRegistration")</h4>
                                 <p>Contact us or give us a call to discover how we can help.</p>
                                 <form action="@Url.Action("Register","Account")" method="post" class="form-signin">
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-12">
-                                                <label>Your name *</label>
+                                                <label>@GetValueByKey("Name") *</label>
                                                 <input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="Name"  id="name" required>
                                             </div>
                                             <div class="col-md-12">
-                                                <label>Your email address *</label>
+                                                <label>@GetValueByKey("Email") *</label>
                                                 <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required>
                                             </div>
                                         </div>
@@ -83,7 +83,7 @@
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-12">
-                                                <label>Password *</label>
+                                                <label>@GetValueByKey("Password") *</label>
                                                 <input type="password" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="password" id="subject" required>
                                             </div>
                                         </div>
@@ -92,7 +92,7 @@
                                     <div class="row">
                                         <div class="form-group">
                                             <div class="col-md-12">
-                                                <label>Phone *</label>
+                                                <label>@GetValueByKey("Phone") *</label>
                                                 <input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control"  name="Phone" id="subject" required>
                                             </div>
                                         </div>

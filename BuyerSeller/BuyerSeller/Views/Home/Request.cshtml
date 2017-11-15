@@ -7,7 +7,7 @@
 
 <div class="box box-primary">
     <div class="box-header with-border">
-        <h3 class="box-title">Buyer Request</h3>
+        <h3 class="box-title">@GetValueByKey("BuyerRequest")</h3>
     </div>
     <div class="box-body">
         <div class="container">
@@ -15,7 +15,7 @@
                 <div class="col-md-11">
                     <form action="@Url.Action("Request","Home")" method="post" class="form-signin">
 
-                        <button type="button" class="btn btn-success" id="btnAdd" onclick="appendRow()">Add Row</button>
+                        <button type="button" class="btn btn-success" id="btnAdd" onclick="appendRow()">@GetValueByKey("AddRow")</button>
                         <br />
                         <br />
                         <div class="form-body">
@@ -23,7 +23,7 @@
                                 <div class="row divRowCls" id="divRow">
                                     <div class="col-md-2">
                                         <select class="form-control BrandID" name="BrandID{IncrementNumber}" id="BrandID">
-                                            <option value="0">Select Brand</option>
+                                            <option value="0">@GetValueByKey("Brand")</option>
                                             @if (ViewBag.Brands != null)
                                         {
                                             foreach (var item in ViewBag.Brands)
@@ -44,14 +44,14 @@
                                     </div>
                                     <div class="col-md-2">
                                         <select class="form-control ModelID" name="ModelID{IncrementNumber}" id="ModelID">
-                                            <option value="0">Select Model</option>
+                                            <option value="0">@GetValueByKey("Model")</option>
                                         </select>
                                         <br />
                                     </div>
                                     <div class="col-md-2">
                                         @*@Html.DropDownList("CategoryID", ViewBag.Category as IEnumerable<SelectListItem>, "Select Category", new { @class = "form-control", @name = "CategoryID" })*@
                                         <select class="form-control category" name="CategoryID{IncrementNumber}" id="CategoryID">
-                                            <option value="0">Select Category</option>
+                                            <option value="0">@GetValueByKey("Category")</option>
                                             @if (ViewBag.Category != null)
                                         {
                                             foreach (var item in ViewBag.Category)
@@ -65,15 +65,15 @@
                                         <br />
                                     </div>
                                     <div class="col-md-2">
-                                        <input type="text" id="inputName" name="Name{IncrementNumber}" class="form-control partname" placeholder="Enter Part Name">
+                                        <input type="text" id="inputName" name="Name{IncrementNumber}" class="form-control partname" placeholder="@GetValueByKey("PartName")">
                                         <br />
                                     </div>
                                     <div class="col-md-2">
-                                        <input type="text" id="inputqty" name="Qty{IncrementNumber}" class="form-control partquantity" placeholder="Enter Quantity">
+                                        <input type="text" id="inputqty" name="Qty{IncrementNumber}" class="form-control partquantity" placeholder="@GetValueByKey("EnterQuantity")">
                                         <br />
                                     </div>
                                     <div class="col-md-2">
-                                        <button type="button" class="removeBtn btn btn-danger" onclick="removeRow(this)" data-id="0">Remove</button>
+                                        <button type="button" class="removeBtn btn btn-danger" onclick="removeRow(this)" data-id="0">@GetValueByKey("Remove")</button>
                                         <br />
                                     </div>
 
@@ -85,8 +85,8 @@
                             <div class="form-actions">
                                 <div class="row">
                                     <div class="col-md-offset-3 col-md-4">
-                                        <button type="submit" class="btn green" onclick="return validate();">Submit</button>
-                                        <button type="button" onclick="location.href='@Url.Action("Request","Home")'" class="btn default">Cancel</button>
+                                        <button type="submit" class="btn green" onclick="return validate();">@GetValueByKey("Submit")</button>
+                                        <button type="button" onclick="location.href='@Url.Action("Request","Home")'" class="btn default">@GetValueByKey("Cancel")</button>
                                     </div>
                                 </div>
                             </div>

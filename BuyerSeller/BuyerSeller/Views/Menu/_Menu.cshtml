@@ -1,7 +1,9 @@
 ﻿@model IEnumerable<BuyerSeller.Models.Role_PermissionMapping>
 @using BOLHelpers.Enums;
+
 <script src="~/Content/Theme/jquery-1.10.2.min.js"></script>
 @{
+
 
     var Country = Model.Where(x => x.Permission.Name.StartsWith("Country")).ToList();
     var Brand = Model.Where(x => x.Permission.Name.StartsWith("Brand")).ToList();
@@ -28,16 +30,16 @@
             {
                 if (item.PermissionId == Convert.ToInt32(Permissionsss.CountryAdd))
                 {
-                    <li><a href=@Url.Action("Create", "Countries1")><i class="fa fa-circle-o text-blue"></i> <span>Add</span></a></li>
+                    <li><a href=@Url.Action("Create", "Countries1")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("Add")</span></a></li>
 
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.CountryEdit))
                 {
-                    <li><a href=@Url.Action("Edit", "Countries1")><i class="fa fa-circle-o text-blue"></i> <span>Edit</span></a></li>
+                    <li><a href=@Url.Action("Edit", "Countries1")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("Edit")</span></a></li>
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.CountryRemove))
                 {
-                    <li><a href=@Url.Action("Index", "Countries1")><i class="fa fa-circle-o text-blue"></i> <span>View All</span></a></li>
+                    <li><a href=@Url.Action("Index", "Countries1")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("ViewAll")</span></a></li>
 
                 }
             }
@@ -62,16 +64,16 @@
             {
                 if (item.PermissionId == Convert.ToInt32(Permissionsss.BrandAdd))
                 {
-                    <li><a href=@Url.Action("Create", "Brands")><i class="fa fa-circle-o text-blue"></i> <span>Add</span></a></li>
+                    <li><a href=@Url.Action("Create", "Brands")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("Add")</span></a></li>
 
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.BrandEdit))
                 {
-                    <li><a href=@Url.Action("Edit", "Brands")><i class="fa fa-circle-o text-blue"></i> <span>Edit</span></a></li>
+                    <li><a href=@Url.Action("Edit", "Brands")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("Edit")</span></a></li>
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.BrandRemove))
                 {
-                    <li><a href=@Url.Action("Index", "Brands")><i class="fa fa-circle-o text-blue"></i> <span>View All</span></a></li>
+                    <li><a href=@Url.Action("Index", "Brands")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("ViewAll")</span></a></li>
 
                 }
             }
@@ -96,16 +98,16 @@
             {
                 if (item.PermissionId == Convert.ToInt32(Permissionsss.ModelAdd))
                 {
-                    <li><a href=@Url.Action("Create", "Models" )><i class="fa fa-circle-o text-blue"></i> <span>Add</span></a></li>
+                    <li><a href=@Url.Action("Create", "Models" )><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("Add")</span></a></li>
 
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.ModelEdit))
                 {
-                    <li><a href=@Url.Action("Edit", "Models")><i class="fa fa-circle-o text-blue"></i> <span>Edit</span></a></li>
+                    <li><a href=@Url.Action("Edit", "Models")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("Edit")</span></a></li>
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.ModelRemove))
                 {
-                    <li><a href=@Url.Action("ModelIndex", "Models")><i class="fa fa-circle-o text-blue"></i> <span>Remove</span></a></li>
+                    <li><a href=@Url.Action("ModelIndex", "Models")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("Remove")</span></a></li>
 
                 }
             }
@@ -129,16 +131,16 @@
             {
                 if (item.PermissionId == Convert.ToInt32(Permissionsss.CategoryAdd))
                 {
-                    <li><a href=@Url.Action("Create", "Categories")><i class="fa fa-circle-o text-blue"></i> <span>Add</span></a></li>
+                    <li><a href=@Url.Action("Create", "Categories")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("Add")</span></a></li>
 
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.CategoryEdit))
                 {
-                    <li><a href=@Url.Action("Edit", "Categories")><i class="fa fa-circle-o text-blue"></i> <span>Edit</span></a></li>
+                    <li><a href=@Url.Action("Edit", "Categories")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("Edit")</span></a></li>
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.CategoryRemove))
                 {
-                    <li><a href=@Url.Action("Index", "Categories")><i class="fa fa-circle-o text-blue"></i> <span>View All</span></a></li>
+                    <li><a href=@Url.Action("Index", "Categories")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("ViewAll")</span></a></li>
 
                 }
             }
@@ -162,36 +164,36 @@
             {
                 if (item.PermissionId == Convert.ToInt32(Permissionsss.BuyerAdd))
                 {
-                    <li><a href=@Url.Action("BuyerRegistration", "Home")><i class="fa fa-circle-o text-blue"></i> <span>Add</span></a></li>
+                    <li><a href=@Url.Action("BuyerRegistration", "Home")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("Add")</span></a></li>
 
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.BuyerEdit))
                 {
-                    <li><a href=@Url.Action("Edit", "Models")><i class="fa fa-circle-o text-blue"></i> <span>Edit</span></a></li>
+                    <li><a href=@Url.Action("Edit", "Models")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("Edit")</span></a></li>
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.BuyerRemove))
                 {
-                    <li><a href=@Url.Action("BuyersList", "Home")><i class="fa fa-circle-o text-blue"></i> <span>View All</span></a></li>
+                    <li><a href=@Url.Action("BuyersList", "Home")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("ViewAll")</span></a></li>
 
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.BuyerRequest))
                 {
-                    <li><a href=@Url.Action("Request", "Home")><i class="fa fa-circle-o text-blue"></i> <span>Buyer Request</span></a></li>
+                    <li><a href=@Url.Action("Request", "Home")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("BuyerRequest")</span></a></li>
 
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.BuyerRequestedOrders))
                 {
-                    <li><a href=@Url.Action("ModelIndex", "Models")><i class="fa fa-circle-o text-blue"></i> <span>Buyer Requested Order</span></a></li>
+                    <li><a href=@Url.Action("ModelIndex", "Models")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("BuyerRequestedOrder")</span></a></li>
 
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.BuyerPostedRequest))
                 {
-                    <li><a href=@Url.Action("RequestedOrders", "Home")><i class="fa fa-circle-o text-blue"></i> <span>Buyer Posted Request</span></a></li>
+                    <li><a href=@Url.Action("RequestedOrders", "Home")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("BuyerPostedRequest")</span></a></li>
 
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.BuyerCompletedOrders))
                 {
-                    <li><a href=@Url.Action("CompletedOrders", "Home")><i class="fa fa-circle-o text-blue"></i> <span>Buyer Completed Order</span></a></li>
+                    <li><a href=@Url.Action("CompletedOrders", "Home")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("BuyerCompletedOrders")</span></a></li>
 
                 }
             }
@@ -215,26 +217,26 @@
             {
                 if (item.PermissionId == Convert.ToInt32(Permissionsss.SellerAdd))
                 {
-                    <li><a href=@Url.Action("RegisterSeller", "Account" )><i class="fa fa-circle-o text-blue"></i> <span>Add</span></a></li>
+                    <li><a href=@Url.Action("RegisterSeller", "Account" )><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("Add")</span></a></li>
 
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.SellerEdit))
                 {
-                    <li><a href=@Url.Action("Request", "Dashboard")><i class="fa fa-circle-o text-blue"></i> <span>Buyer Requests</span></a></li>
+                    <li><a href=@Url.Action("Request", "Dashboard")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("BuyerRequest")</span></a></li>
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.SellerRequest))
                 {
-                    <li><a href=@Url.Action("ModelIndex", "Models")><i class="fa fa-circle-o text-blue"></i> <span>Remove</span></a></li>
+                    <li><a href=@Url.Action("ModelIndex", "Models")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("Remove")</span></a></li>
 
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.SellerRating))
                 {
-                    <li><a href=@Url.Action("CompletedOrders", "Home")><i class="fa fa-circle-o text-blue"></i> <span>Rate Seller</span></a></li>
+                    <li><a href=@Url.Action("CompletedOrders", "Home")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("RateSeller")</span></a></li>
 
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.SellerOffers))
                 {
-                    <li><a href=@Url.Action("Create", "SellerAdvertises")><i class="fa fa-circle-o text-blue"></i> <span>Seller Offer</span></a></li>
+                    <li><a href=@Url.Action("Create", "SellerAdvertises")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("SellerOffer")</span></a></li>
 
                 }
             }
@@ -258,13 +260,13 @@
             {
                 if (item.PermissionId == Convert.ToInt32(Permissionsss.EmployeeAdd))
                 {
-                    <li><a href=@Url.Action("RegisterEmployee", "Account" )><i class="fa fa-circle-o text-blue"></i> <span>Add</span></a></li>
+                    <li><a href=@Url.Action("RegisterEmployee", "Account" )><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("Add")</span></a></li>
 
                 }
 
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.EmployeeViewAll))
                 {
-                    <li><a href=@Url.Action("Employees", "Account")><i class="fa fa-circle-o text-blue"></i> <span>View Alll</span></a></li>
+                    <li><a href=@Url.Action("Employees", "Account")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("ViewAll")</span></a></li>
                 }
             }
 
@@ -288,38 +290,41 @@
             {
                 if (item.PermissionId == Convert.ToInt32(Permissionsss.RoleAdd))
                 {
-            <li><a href=@Url.Action("Create", "Roles")><i class="fa fa-circle-o text-blue"></i> <span>Add Role </span></a></li>
+                    <li><a href=@Url.Action("Create", "Roles")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("AddRole")</span></a></li>
 
                 }
-               else if (item.PermissionId == Convert.ToInt32(Permissionsss.RoleMapping))
+                else if (item.PermissionId == Convert.ToInt32(Permissionsss.RoleMapping))
                 {
-            <li><a href=@Url.Action("Role_PermissionMapping", "RolePermissionMapping")><i class="fa fa-circle-o text-blue"></i> <span>Role Permission Mapping</span></a></li>
+                    <li><a href=@Url.Action("Role_PermissionMapping", "RolePermissionMapping")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("RolePermissionMapping")</span></a></li>
 
                 }
                 else if (item.PermissionId == Convert.ToInt32(Permissionsss.RoleManage))
                 {
-            <li><a href=@Url.Action("Employees", "Account")><i class="fa fa-circle-o text-blue"></i> <span>View Alll</span></a></li>
+                    <li><a href=@Url.Action("Employees", "Account")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("ViewAll")</span></a></li>
                 }
 
 
             }
         </ul>
+
     </li>
 }
 
 
 <li class="treeview">
     <a href="#">
-        <i class="fa  fa-edit"></i> <span>Language</span>
-        <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-        </span>
+        <i class="fa  fa-edit"></i> <span>@GetValueByKey("Languages")</span>
     </a>
-    <ul class="treeview-menu">
+</li>
+<span class="pull-right-container">
+    <i class="fa fa-angle-left pull-right"></i>
+</span>
+    </a>
+<ul class="treeview-menu">
 
-        <li><a href=@Url.Action("Index", "Lang")><i class="fa fa-circle-o text-blue"></i> <span>Add Lables </span></a></li>
+    <li><a href=@Url.Action("Index", "Lang")><i class="fa fa-circle-o text-blue"></i> <span>@GetValueByKey("AddLables")</span></a></li>
 
 
 
-    </ul>
+</ul>
 </li>

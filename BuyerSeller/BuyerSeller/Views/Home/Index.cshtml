@@ -17,7 +17,7 @@
 
 <div class="box box-primary">
     <div class="box-header with-border">
-        <h3 class="box-title">Latest Offers</h3>
+        <h3 class="box-title">@GetValueByKey("LatestOffer")</h3>
     </div>
     <div class="box-body">
         <!-- Main content -->
@@ -47,10 +47,10 @@
                                 <div class="mailbox-attachment-info">
                                     <a href="#" class="mailbox-attachment-name"> @item.Name</a>
                                     <span class="mailbox-attachment-size">
-                                        <h5>  <span><strong> Discount Price: SAR</strong> </span><strong>@item.DiscountPrice </strong> <span style="color:red;font-size:16px;">   @res1 % OFF</span></h5>
+                                        <h5>  <span><strong> @GetValueByKey("DiscountPriceSAR")</strong> </span><strong>@item.DiscountPrice </strong> <span style="color:red;font-size:16px;">   @res1 @GetValueByKey("OFF")</span></h5>
                                     </span>
                                     <span class="mailbox-attachment-size">
-                                        <h4><span></span> Price : SAR <strike> @item.ActualPrice</strike></h4>
+                                        <h4><span></span> @GetValueByKey("PriceSAR") <strike> @item.ActualPrice</strike></h4>
                                     </span>
                                     @{ 
                                         var days = Convert.ToInt32((item.ToDate-DateTime.Now).TotalDays);
@@ -59,7 +59,7 @@
                                     
                                     <br />
                                    
-                                    <a href="#" id="@item.UserId" data-UserId="@item.UserId" class="btn btn-primary btnSubmit">View Details</a> 
+                                    <a href="#" id="@item.UserId" data-UserId="@item.UserId" class="btn btn-primary btnSubmit">@GetValueByKey("ViewDetails")</a> 
                                 </div>
                             </li>
                         }
@@ -75,13 +75,13 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Seller Details For Contact</h4>
+                            <h4 class="modal-title">@GetValueByKey("SellerDetailsForContact")</h4>
                         </div>
                         <div class="modal-body" id="body-content">
                            
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">@GetValueByKey("Close")</button>
                         </div>
                     </div>
 

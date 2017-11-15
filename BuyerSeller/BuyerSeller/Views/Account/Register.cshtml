@@ -7,7 +7,7 @@
 <head>
   
     <link href="~/Content/Theme/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <title>Buyer Registration</title>
+    <title>@GetValueByKey("BuyerRegistration")</title>
 
     <link href="~/Content/Custom.css" rel="stylesheet" />
 </head>
@@ -25,41 +25,41 @@
     @using (Html.BeginForm("BuyerRegistration", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
      <div class="row">
-         <h3 style="text-align:center;">Buyer Registration</h3>
+         <h3 style="text-align:center;">@GetValueByKey("BuyerRegistration")</h3>
                 <div class="form-body">
                     <div class="form-group">
-                        <label class="col-md-3 control-label">Name</label>
+                        <label class="col-md-3 control-label">@GetValueByKey("Name")</label>
                         <div class="col-md-6">
-                            <input type="text" name="Name" class="form-control" placeholder="Enter text">
+                            <input type="text" name="Name" class="form-control" placeholder="@GetValueByKey("EnterText")">
                         </div>
                     </div>
                     <br /><br />
                     <br />
                     <div class="form-group">
-                        <label class="col-md-3 control-label">Phone</label>
+                        <label class="col-md-3 control-label">@GetValueByKey("Phone")</label>
                         <div class="col-md-6">
-                            <input type="text" name="Phone" class="form-control" placeholder="Enter text">
+                            <input type="text" name="Phone" class="form-control" placeholder="@GetValueByKey("EnterText")">
                         </div>
                     </div>
                     <br /><br />
                     <div class="form-group">
-                        <label class="col-md-3 control-label">Email</label>
+                        <label class="col-md-3 control-label">@GetValueByKey("Email")</label>
                         <div class="col-md-6">
-                            <input type="text" name="email" class="form-control" placeholder="Enter text">
+                            <input type="text" name="email" class="form-control" placeholder="@GetValueByKey("EnterText")">
                         </div>
                     </div>
                     <br /><br />
                     <div class="form-group">
-                        <label class="col-md-3 control-label">Password</label>
+                        <label class="col-md-3 control-label">@GetValueByKey("Password")</label>
                         <div class="col-md-6">
-                            <input type="password" name="Password" class="form-control" placeholder="Enter text">
+                            <input type="password" name="Password" class="form-control" placeholder="@GetValueByKey("EnterText")">
                         </div>
                     </div>
                     <br /><br />
                     <div class="form-group">
-                        <label class="col-md-3 control-label">Upload Image</label>
+                        <label class="col-md-3 control-label">@GetValueByKey("UploadImage")</label>
                         <div class="col-md-6">
-                            <input type="file" name="Files" class="form-control" placeholder="Enter text">
+                            <input type="file" name="Files" class="form-control" placeholder="@GetValueByKey("EnterText")">
                         </div>
                     </div>
                     <br /><br />
@@ -67,8 +67,8 @@
                 <div class="form-actions">
                     <div class="row">
                         <div class="col-md-offset-3 col-md-4">
-                            <button type="submit" class="btn btn-primary btn-flat">Submit</button>
-                            <button type="submit" onclick="location.href='@Url.Action("Index","Account")'" class="btn btn-danger btn-flat">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-flat">@GetValueByKey("Submit")</button>
+                            <button type="submit" onclick="location.href='@Url.Action("Index","Account")'" class="btn btn-danger btn-flat">@GetValueByKey("Cancel")</button>
                         </div>
                     </div>
                 </div>

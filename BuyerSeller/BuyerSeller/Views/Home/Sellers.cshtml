@@ -28,7 +28,7 @@
 
     <div class="box box-primary">
         <div class="box-header with-border">
-            <h3 class="box-title">Sellers</h3>
+            <h3 class="box-title">@GetValueByKey("Seller")</h3>
         </div>
         <div class="box-body">
             <div class="container">
@@ -58,9 +58,9 @@
 
                                 <br />
                                 <br />
-                                <a href="#" class="mt-info uppercase btn btn-success btn-flat viewDetails">Details</a>
+                                <a href="#" class="mt-info uppercase btn btn-success btn-flat viewDetails">@GetValueByKey("Details")</a>
 
-                                <a href="#" data-toggle="modal" id="btnViewMap" class="btn btn-success btn-flat ViewMap">View Map</a>
+                                <a href="#" data-toggle="modal" id="btnViewMap" class="btn btn-success btn-flat ViewMap">@GetValueByKey("ViewMap")</a>
 
 
 
@@ -102,7 +102,7 @@
                         <div id="map_canvas" style="width:500px;height:400px;"></div>
                     </div>
                     <div class="modal-footer trSeller">
-                        <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default " data-dismiss="modal">@GetValueByKey("Close")</button>
                     </div>
                 </div>
 

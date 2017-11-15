@@ -157,13 +157,13 @@ desired effect
                                 </a>
                                 <div class="dropdown-menu" role="menu">
                                     <a style="padding:10px;" class="dropdown-item" href="@Url.Action(Request.RequestContext.RouteData.Values["action"].ToString(),Request.RequestContext.RouteData.Values["controller"].ToString(),new {culture = "en" })">
-                                        English
+                                        @GetValueByKey("English")
                                     </a>
                                     <div class="dropdown-divider">
                                         <hr />
                                     </div>
                                     <a style="padding:10px;" class="dropdown-item" href="@Url.Action(Request.RequestContext.RouteData.Values["action"].ToString(),Request.RequestContext.RouteData.Values["controller"].ToString(),new {culture = "ar" })">
-                                        Arabic
+                                       @GetValueByKey("Arabic")
                                     </a>
                                 </div>
 
@@ -249,7 +249,9 @@ desired effect
                                     <ul class="dropdown-menu">
                                         <!-- The user image in the menu -->
                                         <li class="user-header">
+                                      
                                             <img src='@ProductImage' height="160" width="160" class="user-image" alt="User Image" />
+                                                      
 
                                             <p>
                                                 @resimage.Name
@@ -264,10 +266,10 @@ desired effect
                                         <!-- Menu Footer-->
                                         <li class="user-footer">
                                             <div class="pull-left">
-                                                <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                                <a href="#" class="btn btn-default btn-flat">@GetValueByKey("Profile")</a>
                                             </div>
                                             <div class="pull-right">
-                                                <a href="@Url.Action("Logout","Account")" class="btn btn-default btn-flat">Logout</a>
+                                                <a href="@Url.Action("Logout","Account")" class="btn btn-default btn-flat">@GetValueByKey("Logout")</a>
 
                                             </div>
                                         </li>
@@ -297,7 +299,7 @@ desired effect
                     <div class="pull-left info">
                         <p> @Session["UserName"]</p>
                         <!-- Status -->
-                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                        <a href="#"><i class="fa fa-circle text-success"></i> @GetValueByKey("online")</a>
                     </div>
                 </div>
                 <!-- search form (Optional) -->
@@ -338,14 +340,14 @@ desired effect
         </div>
         <!-- /.content-wrapper -->
         <!-- Main Footer -->
-        <footer class="main-footer">
+        @*<footer class="main-footer">
             <!-- To the right -->
             <div class="pull-right hidden-xs">
                 Anything you want
             </div>
             <!-- Default to the left -->
             <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
-        </footer>
+        </footer>*@
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
             <!-- Create the tabs -->
@@ -437,7 +439,6 @@ desired effect
 
     //    $('#datepicker').datepicker({
     //        autoclose: true
-    //    });
     //    //Current Date Selection
     //    $("#datepicker").datepicker("setDate", new Date());
 

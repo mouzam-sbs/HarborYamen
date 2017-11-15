@@ -7,7 +7,7 @@
 <div class="portlet box green">
     <div class="portlet-title">
         <div class="caption">
-            <i class="fa fa-cogs"></i>Posted Orders
+            <i class="fa fa-cogs"></i>@GetValueByKey("postOrders")
         </div>
         <div class="tools">
             <a href="javascript:;" class="collapse" data-original-title="" title=""> </a>
@@ -21,13 +21,15 @@
         <table class="table table-bordered table-striped table-condensed flip-content">
             <thead class="flip-content">
                 <tr>
-                    <td>@Html.DisplayName("Brand")</td>
-                    <td>@Html.DisplayName("Model")</td>
-                    <td>@Html.DisplayName("Category")</td>
-                    <td>@Html.DisplayName("Category")</td>
-                    <td>@Html.DisplayName("Price")</td>
-                    <td>@Html.DisplayName("Qty")</td>
-                    <td>@Html.DisplayName("TotalPrice")</td>
+
+                    <td>@GetValueByKey("Brand")</td>
+                    <td>@GetValueByKey("Model")</td>
+                    <td>@GetValueByKey("Category")</td>
+                    <td>@GetValueByKey("Category")</td>
+                    <td>@GetValueByKey("Price")</td>
+                    <td>@GetValueByKey("Qty")</td>
+                    <td>@GetValueByKey("TotalPrice")</td>
+                 
 
 
                 </tr>

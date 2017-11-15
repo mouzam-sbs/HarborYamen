@@ -3,22 +3,22 @@
     <thead class="flip-content">
         <tr>
             <th>
-                @Html.DisplayName("Brand")
+               @GetValueByKey("Country")
             </th>
             <th>
-                @Html.DisplayName("Brand")
+                @GetValueByKey("Brand")
             </th>
             <th>
-                @Html.DisplayName("Model")
+               @GetValueByKey("Model")
             </th>
             <th>
-                @Html.DisplayName("Category")
+              @GetValueByKey("Category")
             </th>
             <th>
-                @Html.DisplayName("PartName")
+               @GetValueByKey("PartName")
             </th>
             <th>
-                @Html.DisplayName("Qty")
+               @GetValueByKey("Qty")
             </th>
             <th></th>
         </tr>
@@ -48,7 +48,7 @@
                 </td>
                 <td>
                     <a data-toggle="modal" data-target="#basicExample" data-itemid="@item.ID" id="id_@item.ID" class="btn btn-primary addprice">
-                        Add Price
+                       @GetValueByKey("AddPrice")
                     </a>
                     @*<a href="@Url.Action("Sellers","Home",new { id=item.ID})">Add Price</a>*@
                 </td>

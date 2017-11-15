@@ -6,7 +6,7 @@
 
 <div class="box box-primary">
     <div class="box-header with-border">
-        <h3 class="box-title">Add Buyer</h3>
+        <h3 class="box-title">@GetValueByKey("BuyerRegistration")</h3>
     </div>
     <div class="box-body">
 
@@ -17,38 +17,38 @@
         
         <div class="form-body">
             <div class="form-group">
-                <label class="col-md-3 control-label">Name</label>
+                <label class="col-md-3 control-label">@GetValueByKey("Name")</label>
                 <div class="col-md-6">
-                    <input type="text" name="Name" class="form-control" placeholder="Enter Name">
+                    <input type="text" name="Name" class="form-control" placeholder="@GetValueByKey("Name")">
                 </div>
             </div>
             <br /><br />
             <br />
             <div class="form-group">
-                <label class="col-md-3 control-label">Phone</label>
+                <label class="col-md-3 control-label">@GetValueByKey("Phone")</label>
                 <div class="col-md-6">
-                    <input type="text" name="Phone" class="form-control" placeholder="Enter Phone">
+                    <input type="text" name="Phone" class="form-control" placeholder="@GetValueByKey("Phone")">
                 </div>
             </div>
             <br /><br />
             <div class="form-group">
-                <label class="col-md-3 control-label">Email</label>
+                <label class="col-md-3 control-label">@GetValueByKey("Email")</label>
                 <div class="col-md-6">
-                    <input type="text" name="email" class="form-control" placeholder="Enter Email">
+                    <input type="text" name="email" class="form-control" placeholder="@GetValueByKey("Email")">
                 </div>
             </div>
             <br /><br />
             <div class="form-group">
-                <label class="col-md-3 control-label">Password</label>
+                <label class="col-md-3 control-label">@GetValueByKey("Password")</label>
                 <div class="col-md-6">
-                    <input type="text" name="Password" class="form-control" placeholder="Enter Password">
+                    <input type="text" name="Password" class="form-control" placeholder="@GetValueByKey("Password")">
                 </div>
             </div>
             <br /><br />
             <div class="form-group">
-                <label class="col-md-3 control-label">Upload Image</label>
+                <label class="col-md-3 control-label">@GetValueByKey("Image")</label>
                 <div class="col-md-6">
-                    <input type="file" name="Files" class="form-control" placeholder="Enter text">
+                    <input type="file" name="Files" class="form-control" placeholder="@GetValueByKey("Image")">
                 </div>
             </div>
             <br /><br />
@@ -56,8 +56,8 @@
         <div class="form-actions">
             <div class="row">
                 <div class="col-md-offset-3 col-md-4">
-                    <button type="submit" class="btn btn-primary btn-flat">Submit</button>
-                    <button type="submit" onclick="location.href='@Url.Action("Index","Account")'" class="btn btn-danger btn-flat">Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-flat">@GetValueByKey("Submit")</button>
+                    <button type="submit" onclick="location.href='@Url.Action("Index","Account")'" class="btn btn-danger btn-flat">@GetValueByKey("Cancel")</button>
                 </div>
             </div>
         </div>

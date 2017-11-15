@@ -7,16 +7,17 @@
 
 <div class="box box-primary">
     <div class="box-header with-border">
-        <h3 class="box-title">View All Countries</h3>
+        <h3 class="box-title">@GetValueByKey("ViewAllCountries")</h3>
     </div>
     <div class="box-body">
         <table class="table table-bordered table-responsive table-hover">
             <thead class="flip-content">
                 <tr>
-                    <td>@Html.DisplayName("Id")</td>
-                    <td>@Html.DisplayName("Name")</td>
-                    <td>@Html.DisplayName("Created Date")</td>
-                    <td>@Html.DisplayName("Action")</td>
+                  
+                    <td>@GetValueByKey("Id")</td>
+                    <td>@GetValueByKey("Name")</td>
+                    <td>@GetValueByKey("CreatedOn")</td>
+                   <td>@GetValueByKey("Action")</td>
 
 
 

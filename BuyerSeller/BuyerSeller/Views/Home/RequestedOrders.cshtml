@@ -25,7 +25,7 @@
 
 <div class="box box-primary">
     <div class="box-header with-border">
-        <h3 class="box-title">Buyer Posted Request</h3>
+        <h3 class="box-title">@GetValueByKey("BuyerPostedRequest")</h3>
     </div>
     <div class="box-body">        
         <div class="container">
@@ -37,7 +37,7 @@
                             <h4>Order # @item.ID |Brand Name: @item.Brand.Name </h4>  <h4>Model:@item.Model.Name </h4>
                             <h5>Qty: @item.Qty  | Part Name: @item.PartName</h5>
                             <hr />
-                            <a href="@Url.Action("Sellers","Home",new { id=item.ID})" class="btn btn-success btn-flat" style="text-align:center;">View Details</a>
+                            <a href="@Url.Action("Sellers","Home",new { id=item.ID})" class="btn btn-success btn-flat" style="text-align:center;">@GetValueByKey("ViewDetails")</a>
 
                         </div>
                     }

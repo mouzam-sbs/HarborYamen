@@ -8,7 +8,7 @@
 
 <div class="box box-primary">
     <div class="box-header with-border">
-        <h3 class="box-title">Add Buyer</h3>
+        <h3 class="box-title">@GetValueByKey("AddBuyer")</h3>
     </div>
     <div class="box-body">
 
@@ -16,16 +16,19 @@
             <thead class="flip-content">
                 <tr>
 
-                    <td>@Html.DisplayName("Image")</td>
+                    <td>@GetValueByKey("Image")</td>
+                    <td>@GetValueByKey("Name")</td>
+                    <td>@GetValueByKey("Email")</td>
+                    <td>@GetValueByKey("Phone")</td>
+                    @*<td>@GetValueByKey("Latitude")</td>
+                     <td>@GetValueByKey("Longitude")</td>*@
+                   
+                    <td>@GetValueByKey("Address")</td>
+                    <td>@GetValueByKey("Roles")</td>
+                    <td>@GetValueByKey("Action")</td>
 
-                    <td>@Html.DisplayName("Name")</td>
-                    <td>@Html.DisplayName("Email")</td>
-                    <td>@Html.DisplayName("Phone")</td>
-                    @*<td>@Html.DisplayName("Latitude")</td>
-                        <td>@Html.DisplayName("Longitude")</td>*@
-                    <td>@Html.DisplayName("Address")</td>
-                    <td>@Html.DisplayName("Role")</td>
-                    <td>@Html.DisplayName("Action")</td>
+
+                  
 
 
 
@@ -72,7 +75,7 @@
                             @Html.DisplayFor(modelItem => item.Role.Name)
                         </td>
                         <td>
-                            <button class="btn btn-success" onclick="location.href='@Url.Action("ManageRole","Account",new { userid=@item.ID})'">Manage Role</button>
+                            <button class="btn btn-success" onclick="location.href='@Url.Action("ManageRole","Account",new { userid=@item.ID})'">@GetValueByKey("ManageRole")</button>
                         </td>
                     </tr>
  }

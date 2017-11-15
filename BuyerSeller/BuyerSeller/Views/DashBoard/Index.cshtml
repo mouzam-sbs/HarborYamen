@@ -6,12 +6,12 @@
  
     <section class="content-header">
         <h1>
-            Dashboard
-            <small>Control panel</small>
+            @GetValueByKey("Dashboard")
+            <small>@GetValueByKey("Controlpanel")</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Dashboard</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i>@GetValueByKey("Home")</a></li>
+            <li class="active">@GetValueByKey("Dashboard")</li>
         </ol>
     </section>
     <!-- Main content -->
@@ -23,12 +23,12 @@
                 <div class="small-box bg-aqua">
                     <div class="inner">
                         <h3>@ViewBag.PostedOrders</h3>
-                        <p>Posted Orders</p>
+                        <p>@GetValueByKey("PostOrders")</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-bag"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="#" class="small-box-footer">@GetValueByKey("MoreInfo")<i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -37,12 +37,12 @@
                 <div class="small-box bg-green">
                     <div class="inner">
                         <h3>@ViewBag.NewOrder</h3>
-                        <p>New Request</p>
+                        <p>@GetValueByKey("NewRequest")</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-fw fa-shopping-cart"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="#" class="small-box-footer">@GetValueByKey("MoreInfo")<i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -51,12 +51,12 @@
                 <div class="small-box bg-yellow">
                     <div class="inner">
                         <h3>@ViewBag.Sellers</h3>
-                        <p>Total Sellers</p>
+                        <p>@GetValueByKey("TotalSellers")</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-person-add"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="#" class="small-box-footer">@GetValueByKey("MoreInfo")<i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -65,12 +65,12 @@
                 <div class="small-box bg-red">
                     <div class="inner">
                         <h3>@ViewBag.Buyers</h3>
-                        <p>Total Buyers</p>
+                        <p>@GetValueByKey("TotalBuyer")</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-fw fa-users"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="#" class="small-box-footer">@GetValueByKey("MoreInfo")<i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -91,17 +91,17 @@
                         <div class="row">
                             <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
                                 <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60" data-fgColor="#39CCCC">
-                                <div class="knob-label">Mail-Orders</div>
+                                <div class="knob-label">@GetValueByKey("MailOrders")</div>
                             </div>
                             <!-- ./col -->
                             <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
                                 <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60" data-fgColor="#39CCCC">
-                                <div class="knob-label">Online</div>
+                                <div class="knob-label">@GetValueByKey("online")</div>
                             </div>
                             <!-- ./col -->
                             <div class="col-xs-4 text-center">
                                 <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60" data-fgColor="#39CCCC">
-                                <div class="knob-label">In-Store</div>
+                                <div class="knob-label">@GetValueByKey("Instore")</div>
                             </div>
                             <!-- ./col -->
                         </div>
@@ -129,7 +129,7 @@
                         <!-- /. tools -->
                         <i class="fa fa-map-marker"></i>
                         <h3 class="box-title">
-                            Visitors
+                           @GetValueByKey("Visitors")
                         </h3>
                     </div>
                     <div class="box-body">
@@ -140,17 +140,17 @@
                         <div class="row">
                             <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
                                 <div id="sparkline-1"></div>
-                                <div class="knob-label">Visitors</div>
+                                <div class="knob-label">@GetValueByKey("Visitors")</div>
                             </div>
                             <!-- ./col -->
                             <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
                                 <div id="sparkline-2"></div>
-                                <div class="knob-label">Online</div>
+                                <div class="knob-label">@GetValueByKey("online")</div>
                             </div>
                             <!-- ./col -->
                             <div class="col-xs-4 text-center">
                                 <div id="sparkline-3"></div>
-                                <div class="knob-label">Exists</div>
+                                <div class="knob-label">@GetValueByKey("Exists")</div>
                             </div>
                             <!-- ./col -->
                         </div>

@@ -13,15 +13,15 @@
 
     <div class="box box-primary">
         <div class="box-header with-border">
-            <h3 class="box-title">Add Category</h3>
+            <h3 class="box-title">@GetValueByKey("AddCategory")</h3>
         </div>
         <div class="box-body"> 
             <div class="form-body">
                  
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Name</label>
+                    <label class="col-md-3 control-label">@GetValueByKey("Name")</label>
                     <div class="col-md-6">
-                        <input type="text" name="Name" class="form-control" placeholder="Enter text">
+                        <input type="text" name="Name" class="form-control" placeholder="@GetValueByKey("Name")">
                     </div>
                 </div>
                 
@@ -31,8 +31,8 @@
             <div class="form-actions">
                 <div class="row">
                     <div class="col-md-offset-3 col-md-4">
-                        <button type="submit" class="btn btn-primary btn-flat">Submit</button>
-                        <button type="submit" onclick="location.href='@Url.Action("Index","Categories")'" class="btn btn-danger btn-flat">Cancel</button>
+                        <button type="submit" class="btn btn-primary btn-flat">@GetValueByKey("Submit")</button>
+                        <button type="submit" onclick="location.href='@Url.Action("Index","Categories")'" class="btn btn-danger btn-flat">@GetValueByKey("Cancel")</button>
                     </div>
                 </div>
             </div>

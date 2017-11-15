@@ -11,7 +11,7 @@
 
 <div class="box box-primary">
     <div class="box-header with-border">
-        <h3 class="box-title">Edit Model</h3>
+        <h3 class="box-title">@GetValueByKey("Edit")</h3>
     </div>
     <div class="box-body">
         <div class="form-body">
@@ -42,8 +42,8 @@
         <div class="form-actions">
             <div class="row">
                 <div class="col-md-offset-3 col-md-4">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button type="submit" onclick="location.href='@Url.Action("Index","Brands")'" class="btn btn-danger">Cancel</button>
+                    <button type="submit" class="btn btn-primary">@GetValueByKey("Submit")</button>
+                    <button type="submit" onclick="location.href='@Url.Action("Index","Brands")'" class="btn btn-danger">@GetValueByKey("Cancel")</button>
                 </div>
             </div>
         </div>

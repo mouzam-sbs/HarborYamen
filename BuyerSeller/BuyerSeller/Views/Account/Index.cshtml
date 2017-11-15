@@ -6,7 +6,7 @@
  <html>
 <head>
     <meta charset="utf-8" />
-    <title>Buyer & Seller App Login</title>
+    <title>@GetValueByKey("BuyerSellerAppLogin")</title>
 
     <link href="~/Content/Theme/LoginTheme/style.css" rel="stylesheet" />  
     <script src="~/Content/Theme/LoginTheme/index.js"></script>
@@ -28,21 +28,21 @@
                   
                 }
                 <div>
-                    <input type="text" placeholder="Enter Your Email or Mobile Number" required="" name="email" id="username" />
+                    <input type="text" placeholder="@GetValueByKey("EnterYourEmailorMobileNumber")" required="" name="email" id="username" />
                 </div>
                 <div>
-                    <input type="password" placeholder="Password" required="" name="password" id="password" />
+                    <input type="password" placeholder="@GetValueByKey("Password")" required="" name="password" id="password" />
                 </div>
                 <div>
                     <input type="submit" value="Log in" style="background-color:#730000" />
-                    <a href="#">Lost your password?</a>
+                    <a href="#">@GetValueByKey("Lostyourpassword")</a>
 
                 </div>
             
             }
             <!-- form -->
             <div class="button">
-                <a href="@Url.Action("Register","Account")">Buyer Registration</a>
+                <a href="@Url.Action("Register","Account")">@GetValueByKey("BuyerRegistration")</a>
             </div><!-- button -->
         </section> 
     </div>

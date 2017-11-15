@@ -7,7 +7,7 @@
 <div class="modal-content">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Seller reviews</h4>
+        <h4 class="modal-title">@GetValueByKey("Sellerreviews")</h4>
     </div>
     <div class="modal-body" id="bodyRating">
 
@@ -31,7 +31,7 @@
         </div>
         <div class="row">
             <div class="col-md-3">
-                Comments:
+               @GetValueByKey("Comments")
             </div>
             <div class="col-md-9">
                 <textarea cols="20" rows="5" id="reviewComments"></textarea>
@@ -39,8 +39,8 @@
         </div>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-default" id="btnSubmitRating">Submit</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" id="btnSubmitRating">@GetValueByKey("Submit")</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">@GetValueByKey("Close")</button>
     </div>
 </div>
 <script>

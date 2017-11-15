@@ -1,4 +1,5 @@
-﻿@model BuyerSeller.Models.OrderDetail
+﻿
+@model BuyerSeller.Models.OrderDetail
 
 <div class="modal-dialog">
     <!-- Modal content-->
@@ -32,12 +33,12 @@
                             </div>
                         </div>
                     </div>
-                    <p><strong> Seller Details</strong></p>
+                    <p><strong>@GetValueByKey("SellerDetails")</strong></p>
                     <p style="margin:0;padding:0;">Mobile: @Model.User.MobileNo</p>
                     <p style="margin:0;padding:0;">Email: @Model.User.EmailID</p>
                     <p style="margin:0;padding:0;">Address: @Model.User.Address</p>
                     <br />
-                    <p><strong> Product Details</strong></p>
+                    <p><strong>@GetValueByKey("ProductDetails")</strong></p>
                     <p style="margin:0;padding:0;">Part Name:@Model.Order.PartName</p>
                     <p style="margin:0;padding:0;">Quantity: @Model.Order.Qty</p>
                     <p style="margin:0;padding:0;">Price:@Model.Price</p>
@@ -49,9 +50,9 @@
 
         </div>
         <div class="modal-footer trSeller" data-sellerid="@Model.ID">
-            <button type="button" class="btn btn-primary btnSelectSeller" data-dismiss="modal" onclick="location.href='@Url.Action("CompleteOrder","Home",new { id=Model.ID})'">Select & Close Requirement</button>
+            <button type="button" class="btn btn-primary btnSelectSeller" data-dismiss="modal" onclick="location.href='@Url.Action("CompleteOrder","Home",new { id=Model.ID})'">@GetValueByKey("SelectCloseRequirement")</button>
 
-            <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default " data-dismiss="modal">@GetValueByKey("Close")</button>
         </div>
     </div>
 

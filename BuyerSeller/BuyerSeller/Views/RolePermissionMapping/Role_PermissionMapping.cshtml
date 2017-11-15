@@ -14,7 +14,7 @@
 
     <div class="box box-primary">
         <div class="box-header with-border">
-            <h3 class="box-title">Role Permission Mapping</h3>
+            <h3 class="box-title">@GetValueByKey("RolePermissionMapping")</h3>
         </div>
         <div class="box-body">
             <div class="container">
@@ -22,11 +22,11 @@
                     <div class="box-body">
                         <div class="row">
                             <div class="col-md-1">
-                                <label>Role Name</label>
+                                <label>@GetValueByKey("Role")</label>
                             </div>
                             <div class="col-md-5">
                                 <select class="form-control select2  RoleId" id="RoleId" style="width: 100%;" name="RoleId">
-                                    <option value="0">Select</option>
+                                    <option value="0">@GetValueByKey("Role")</option>
 
                                     @if (ViewBag.RoleList != null)
                                     {
@@ -46,7 +46,7 @@
                             <div class="col-md-2">
                                 <button type="submit" id="btnSubmit" class="btn btn-primary">
                                     <i class="fa fa-spinner fa-spin hide"></i>
-                                    Save and Send
+                                    @GetValueByKey("Save")
                                 </button>
                             </div>
                         </div>

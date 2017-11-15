@@ -8,7 +8,7 @@
     <!-- Panel Projects -->
     <div class="panel" id="projects">
         <div class=" panel-heading">
-            <h3 class="panel-title">LanguageList</h3>
+            <h3 class="panel-title">@GetValueByKey("Languages")</h3>
 
             <div class="container">
                 <div class="example table-responsive">
@@ -16,11 +16,11 @@
 
                         <thead>
                             <tr>
-                                <th>Key</th>
-                                <th>English Value</th>
-                                <th>Arabic Value</th>
+                                @GetValueByKey("Key")
+                                @GetValueByKey("English")
+                                @GetValueByKey("Arabic")
                                 
-                                <th>Action</th>
+                                @GetValueByKey("Action")
                             </tr>
                         </thead>
                         <tbody>
@@ -35,7 +35,7 @@
                                     <td>
                                         <button class="btn btn-primary editLang" data-target="#exampleFormModalAdd" data-toggle="modal"
                                                 type="button" data-id="@item.ID" data-key="@item.Key" data-value="@item.Value" data-lang="@item.LanguageId">
-                                            Edit
+                                            @GetValueByKey("Edit")
                                         </button>
 
                                     </td>
